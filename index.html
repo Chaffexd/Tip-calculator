@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+
+  <h1>SPLI <br> TTER</h1>
+  <div class="container">
+    <div class="inputs">
+      <div class="billAmount">
+        <label for="bill" class="labelWidth">Bill</label>
+        <input type="number" class="bill" id="billAmount" placeholder="0">
+      </div>
+      <div class="tipInput">
+        <label for="tip" class="selectTip">Select tip %</label>
+        <div class="buttonGroup">
+          <input type="radio" id="5" class="tipper" value="5" name="tip">
+          <label for="5" class="tipButton">5%</label>
+          <input type="radio" id="10" class="tipper" value="10" name="tip">
+          <label for="10" class="tipButton">10%</label>
+          <input type="radio" id="15" class="tipper" value="15" name="tip">
+          <label for="15" class="tipButton">15%</label>
+        </div>
+        <div class="buttonGroup">
+          <input type="radio" id="25" class="tipper" value="25" name="tip">
+          <label for="25" class="tipButton">25%</label>
+          <input type="radio" id="50" class="tipper" value="50" name="tip">
+          <label for="50" class="tipButton">50%</label>
+          <input type="number" class="tipButton custom" id="custom" placeholder="Custom" name="tip">
+        </div>
+      </div>
+      <div class="peopleAmount">
+        <div class="errorBox">
+          <label for="numPeople" class="labelWidth">Number of People</label>
+          <span id="errorMessage">Can't be zero</span>
+        </div>
+        <input type="number" class="numPeople" id="numPeople" placeholder="0">
+      </div>
+    </div>
+    <div class="display">
+      <div class="outputValues">
+        <div class="tipAmounts">
+          <div class="tipText">
+            <p class="tipA">Tip Amount</p>
+            <p class="personB">/person</p>
+          </div>
+          <div class="output">
+            <p id="outputPerPers">$0.00</p>
+          </div>
+        </div>
+        <div class="tipAmounts">
+          <div class="tipText">
+            <p class="tipA">Total</p>
+            <p class="personB">/person</p>
+          </div>
+          <div class="output">
+            <p id="outputTotalPerPers">$0.00</p>
+          </div>
+        </div>
+      </div>
+      <button class="reset" id="reset">RESET</button>
+    </div>
+  </div>
+  
+  <script src="tipCalculator.js"></script>
+</body>
+</html>

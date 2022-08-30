@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+    box-sizing: border-box;
+}
+
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    height: 100vh;
+    background-color: var(--light-grayish-cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--very-dark-cyan);
+    letter-spacing: 4px;
+    font-size: 10px;
+    position: relative;
+    top: -40px;
+}
+
+.container {
+    width: 55%;
+    height: 55%;
+    background: var(--white);
+    margin-top: 3em;
+    border-radius: 10px;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.inputs {
+    width: 50%;
+    height: 100%;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: var(--dark-grayish-cyan);
+}
+
+.tipInput {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.selectTip {
+    width: 100%;
+}
+
+.tipper {
+    display: none;
+}
+
+.tipButton {
+    width: 31%;
+    height: 35px;
+    margin-top: .6em;
+    color: var(--white);
+    background-color: var(--very-dark-cyan);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+input:checked + label {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.tipButton:hover {
+    background-color: var(--light-grayish-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.custom {
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--very-dark-cyan);
+    text-align: center;
+}
+
+.custom:hover {
+    border: 2px solid var(--strong-cyan);
+    cursor: text;
+}
+
+.buttonGroup {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+label {
+    font-size: 11px;
+}
+
+.labelWidth {
+    display: block;
+}
+
+.errorBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+#errorMessage {
+    display: block;
+    visibility: hidden;
+    text-align: right;
+    position: relative;
+    top: 1px;
+    color: red;
+}
+
+.bill, .numPeople {
+    width: 100%;
+    margin-top: .6em;
+    padding: .3em;
+    background-color: var(--very-light-grayish-cyan);
+    border: none;
+    border-radius: 8px;
+}
+
+.bill {
+    background-image: url(/images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    text-align: right;
+    color: var(--very-dark-cyan);
+    font-size: 18px;
+}
+
+.bill:focus, .numPeople:focus {
+    border: 1px solid var(--strong-cyan);
+    outline: none;
+}
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.numPeople {
+    background-image: url(/images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    text-align: right;
+    color: var(--very-dark-cyan);
+    font-size: 18px;
+}
+
+/* OUTPUT VALUES */
+.display {
+    background-color: var(--very-dark-cyan);
+    width: 50%;
+    border-radius: 10px;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.tipAmounts {
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tipText {
+    padding: .5em;
+}
+
+.tipA {
+    font-size: 12px;
+    padding-bottom: .2em;
+}
+
+.personB {
+    color: var(--grayish-cyan);
+}
+
+#output, #outputPerPers, #outputTotalPerPers {
+    font-size: 3em;
+    color: var(--strong-cyan);
+}
+
+.reset {
+    width: 100%;
+    background-color: var(--strong-cyan);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.reset:hover {
+    background-color: var(--light-grayish-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.error, .error:focus {
+    border: 1px solid red;  
+}
